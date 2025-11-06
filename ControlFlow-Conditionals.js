@@ -71,3 +71,23 @@ let isEditor = false;
 console.log(isAdmin && isEditor); // false (AND)
 console.log(isAdmin || isEditor); // true (OR)
 console.log(!isAdmin); // false (NOT)
+
+// Switch Statements:
+let food = 'banana';
+
+switch(food) {
+    case 'banana':
+        console.log("Yellow fruit");
+        break;
+    case 'apple':
+        console.log("Red or green fruit");
+        break;
+    default:
+        console.log("Unknown fruit");
+        break;
+}
+
+// Ternary (Conditional) Operator:
+let age = 20;
+let isAdult = (age >= 18) ? "Adult" : "Minor"; // we avoid bunch of lines with if-else
+console.log(isAdult); // "Adult"

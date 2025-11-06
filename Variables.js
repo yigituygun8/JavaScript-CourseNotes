@@ -1,5 +1,19 @@
 console.log("Hello, World!");
 
+/* 
+let and const are block-scoped variable declarations introduced in ES6.
+- Use let for variables that may change value.
+- Use const for variables that should not be reassigned after their initial assignment.
+
+var is function-scoped and can lead to unexpected behaviors due to hoisting (moving) and scope leakage.
+
+| When to use              | Keyword | Why                       |
+| ------------------------ | ------- | ------------------------- |
+| Variable that changes    | `let`   | clear, block-scoped       |
+| Constant (never changes) | `const` | safer, block-scoped       |
+| Avoid using              | `var`   | outdated, confusing scope |
+*/
+
 let text = "C++"; // Strings are immutable in JavaScript
 text = "JavaScript is fun!"; // this means C++ still exists in memory but no longer referenced, text refers to a new string
 console.log(text);
