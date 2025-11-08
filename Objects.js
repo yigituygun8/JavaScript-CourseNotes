@@ -24,6 +24,16 @@ JavaScript = flexible, object-first world.
 
 PS: Almost always, declare objects with const to prevent reassignment of the object reference itself.
 You can still modify the properties of a const object.
+
+In JavaScript, almost "everything" is an object.
+    Objects are objects
+    Maths are objects
+    Functions are objects
+    Dates are objects
+    Arrays are objects
+    Maps are objects
+    Sets are objects
+All JavaScript values, except primitives, are objects.
 */
 
 let person = {
