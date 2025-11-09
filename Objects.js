@@ -120,3 +120,37 @@ person3.greet();
 person4.greet();
 // PS: In real applications, we often use classes to define blueprints for objects with common properties and methods.
 
+// Checking Property Existence: we use 'in' operator
+if('age' in person4) {
+    console.log("age property exists in person4");
+}
+
+// Deleting Properties: use 'delete' keyword
+delete person4.age;
+console.log("After deletion of 'age' in person4: " + ('age' in person4)); // false
+
+console.log('toString' in person4); // true - inherited from Object prototype
+// or another better way -> hasOwnProperty() method
+console.log(person4.hasOwnProperty('firstName')); // true
+console.log(person4.hasOwnProperty('toString')); // false - inherited, not own property
+
+// Nested Objects: objects can contain other objects as properties
+let human = {
+    name: 'Yiğit',
+    age: 19,
+    // address: 'Bilkent University, Ankara' // instead of a whole address, we can separate the address, which is more structured
+    address: {
+        // street: 'Bilkent University 92.Dorm',
+        street: {
+            name: 'Bilkent University',
+            dormNumber: 92,
+            dormGender: 'Male'
+        },
+        postCode: '06800',
+        city: 'Ankara',
+        country: 'Turkey'
+    }
+};
+console.log(human.address.city);
+console.log(human.address.street.dormNumber);
+// Of course, be careful with deep nesting as it can make code harder to read and maintain.
