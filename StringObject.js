@@ -58,6 +58,13 @@ console.log(str.includes("Hello")); // true
 console.log(str.startsWith("H")); // true
 console.log(str.startsWith("H", 1)); // false
 
+// Searching:
+console.log(str.indexOf("World")); // index (position) of the first occurrence of a string in a string, or it returns -1 if the string is not found
+
+let text3 = "The rain in SPAIN stays mainly in the plain"; 
+let myArray3 = text3.match(/ain/gi); // global and case insensitive search
+console.log(myArray3.length + " " + myArray3);
+
 /*
 Property access might be a little unpredictable: let char = text[0]
     It makes strings look like arrays (but they are not)
