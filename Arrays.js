@@ -127,3 +127,7 @@ console.log("Index of first number larger than 10 using findIndex():", firstLarg
 // findLast is added in ES2023
 const lastLargerThan10 = nums.findLast(n => n > 10);
 console.log("First number larger than 10 from the end using findLast():", lastLargerThan10); // Output: 44
+
+// Filter: returns all elements that satisfy the condition
+const allLargerThan10 = nums.filter(n => n > 10);
+console.log("All numbers larger than 10 using filter():", allLargerThan10); // Output: [12, 130, 44]
