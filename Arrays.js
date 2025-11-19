@@ -55,3 +55,75 @@ for(let i in cars) {
         console.log("  " + cars[i].models[j]);
     }
 }
+
+// ARRAY METHODS:
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+console.log("Size: " + fruits.length);
+// length can also be used to truncate or expand an array
+// fruits.length = 2;
+// console.log("Truncated Array: " + fruits);
+
+console.log("To String: " + fruits.toString());
+
+// Normally you can't access with negative indices, but you can use at() method
+console.log("Last element using at(): " + fruits.at(-1));
+
+// Join: joins all array elements into a single string with a specified separator
+let joinedFruits = fruits.join(" - ");
+console.log("Joined Fruits: " + joinedFruits);
+
+// Shift and Unshift: remove/add elements at the beginning
+let shifted = fruits.shift(); // returns the removed element
+console.log(shifted, fruits);
+
+let newSize = fruits.unshift("Banana"); // returns the new size of the array
+console.log(newSize, fruits);
+
+// Push and Pop: add/remove elements at the end
+let popped = fruits.pop(); // returns the removed element
+console.log(popped, fruits);
+
+let newSizeAfterPush = fruits.push("Pineapple"); // returns the new size of the array
+console.log(newSizeAfterPush, fruits);
+
+// Modifying elements directly
+fruits[0] = "Strawberry"; 
+console.log(fruits);
+
+// Concat: merging arrays
+const boys = ["John", "Peter", "Mark"];
+const girls = ["Mary", "Sally", "Jane"];
+const all = boys.concat(girls); // Does not modify the original arrays, returns a new array
+console.log(all);
+
+// Splice: adding/removing elements at a specific index - syntax: splice(startIndex, deleteCount, item1, item2, ...)
+let removedItems = fruits.splice(1, 2, "kiwi");
+console.log("After Splice: " + fruits + ", Removed: " + removedItems);
+// fruits.splice(0, 1) can be used to delete an element from beginning (same with shift) - fruits.splice(0, n) - delete n elements from beginning
+
+// Slice: extracting a portion of an array - syntax: slice(startIndex, endIndex) - returns a new array, does not modify the original
+const sliced = fruits.slice(0, 2); // end exclusive
+console.log("Sliced portion: " + sliced + " Original: " + fruits);
+console.log("End index not specified: " + fruits.slice(1)); // slices out the rest of the array from startIndex
+
+// SEARCHING IN ARRAY:
+
+console.log("Index of Apple: " + fruits.indexOf("Apple")); // -1 if not found | returns the index of the first occurrence
+// also there is lastIndexOf() to find the last occurrence
+
+console.log("Includes Strawberry? " + fruits.includes("Strawberry")); // true/false
+console.log("Includes NaN? " + [1, 2, NaN].includes(NaN)); // true
+
+// Find, FindIndex, Filter, Some, Every:
+// These methods are useful when working with arrays of objects or complex data structures
+const nums = [5, 12, 8, 130, 44];
+const firstLargerThan10 = nums.find(n => n > 10);
+console.log("\nFirst number larger than 10 using find():", firstLargerThan10); // Output: 12
+
+const firstLargerThan10Index = nums.findIndex(n => n > 10);
+console.log("Index of first number larger than 10 using findIndex():", firstLargerThan10Index); // Output: 1
+
+// findLast is added in ES2023
+const lastLargerThan10 = nums.findLast(n => n > 10);
+console.log("First number larger than 10 from the end using findLast():", lastLargerThan10); // Output: 44
