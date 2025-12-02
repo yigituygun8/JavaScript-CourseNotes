@@ -154,3 +154,23 @@ let human = {
 console.log(human.address.city);
 console.log(human.address.street.dormNumber);
 // Of course, be careful with deep nesting as it can make code harder to read and maintain.
+
+// Iterate through Objects
+let obj = {
+    a: 123,
+    b: 456,
+    c: 789
+};
+
+console.log(Object.keys(obj)); // returns an array of keys
+Object.keys(obj).forEach(key => {
+    console.log(key + ": " + obj[key]);
+});
+// or
+Object.values(obj).forEach(value => {
+    console.log(value);
+});
+
+Object.entries(obj).forEach(entry => {
+    console.log(entry, entry[0], entry[1]); // gives arrays for each key-value pair
+});
