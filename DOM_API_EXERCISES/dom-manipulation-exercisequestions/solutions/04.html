@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box { width: 50px; height: 50px; cursor: pointer}
+        .red { background-color: red}
+        .green { background-color: green}
+        .blue { background-color: blue}
+        .magenta { background-color: magenta}
+        .orange { background-color: orange}
+        .container { display: flex; gap: 30px; width: max-content; margin: auto}
+        p { font-size: 40px; text-align: center;}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box red" data-color="red"></div>
+        <div class="box green" data-color="green"></div>
+        <div class="box blue" data-color="blue"></div>
+        <div class="box magenta" data-color="magenta"></div>
+        <div class="box orange" data-color="orange"></div>
+    </div>
+    <p>Hello World!!!</p>
+    <script>
+        const p = document.querySelector("p")
+        document.querySelectorAll(".box")
+                .forEach( b => b.addEventListener("click", function() {
+                     p.style.color = b.dataset.color  // user defined data-color
+                }))
+        // OR (which is not scalable)
+        // document.querySelector(".red").addEventListener("click", function() {
+        //     p.style.color = "red"
+        // })
+        // document.querySelector(".green").addEventListener("click", function() {
+        //     p.style.color = "green"
+        // })
+        // document.querySelector(".blue").addEventListener("click", function() {
+        //     p.style.color = "blue"
+        // })
+        // document.querySelector(".magenta").addEventListener("click", function() {
+        //     p.style.color = "magenta"
+        // })
+        // document.querySelector(".orange").addEventListener("click", function() {
+        //     p.style.color = "orange"
+        // })
+
+
+    </script>
+</body>
+</html>

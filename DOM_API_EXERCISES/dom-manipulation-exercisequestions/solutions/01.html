@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p, div { text-align: center;}
+    </style>
+</head>
+<body>
+    <p id="number">##</p>
+    <div>
+        <button>Random</button>
+    </div>
+    <script>
+        const p = document.getElementById("number")
+        const btn = document.querySelector("button")
+        btn.addEventListener("click", function() {
+            const rnd = Math.floor(Math.random() * 101)
+            p.textContent = rnd
+        })
+    </script>
+</body>
+</html>

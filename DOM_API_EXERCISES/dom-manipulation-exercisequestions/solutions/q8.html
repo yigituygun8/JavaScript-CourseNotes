@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container  {display: flex; gap: 50px; width:max-content; margin: auto }
+        .icons { width: 100px; height: 100px; 
+                 border-radius: 100%;
+                 background-color: #DDD ;
+                 border: 3px solid #666;
+                 cursor: pointer;
+                 padding: 5px;
+                 
+                }
+        .british { background-image: url(./img/british.jpg) ;
+                   background-position: -30px 0 ;
+        }
+
+        .tekir {
+                   background-image: url(./img/tekir.jpg) ;
+                   background-position: -20px 0 ;
+                   background-size: cover;
+        }
+        .bengal {
+                background-image: url(./img/bengal.jpg) ;
+                   background-repeat: no-repeat;
+                   background-position: -120px -10px ;
+        }
+        #panel { border-radius: 20px;}
+        .imgContainer { text-align: center; margin-top: 50px}
+        .active { border-style: dashed}
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="icons british" data-img="british.jpg"></div>
+        <div class="icons tekir" data-img="tekir.jpg"></div>
+        <div class="icons bengal" data-img="bengal.jpg"></div>
+    </div>
+    <div class="imgContainer">
+        <img  id="panel">
+    </div>
+    <script>
+        const panel = document.getElementById("panel")
+        document.querySelectorAll(".icons")
+                .forEach( icon => {
+                    icon.addEventListener("click", function() {
+                       let currentImage = panel.src
+                       console.log(currentImage)
+                       panel.src = "./img/" + this.dataset.img
+                       this.style.backgroundImage = "none"
+                       this.classList.add("active")
+                       
+                       if ( currentImage.length !== 0) {
+                          // parse url http://ip/../british.jpg
+                          console.log(currentImage)
+                          let name = currentImage.split("/").pop().split(".")[0]
+                          // name is british, tekir or bengal
+                          const icon = document.querySelector("." + name)
+                          console.log(icon)
+                          icon.style.backgroundImage = "url(./img/" + name + ".jpg)"
+                          icon.classList.remove("active")
+                       }
+                    })
+                })
+    </script>
+</body>
+</html>

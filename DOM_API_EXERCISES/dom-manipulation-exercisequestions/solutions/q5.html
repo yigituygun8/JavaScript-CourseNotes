@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1, div, p { text-align: center;}
+        button { cursor: pointer}
+    </style>
+</head>
+<body>
+    <h1>Font Size Demo</h1>
+    <div><button>+5px</button></div>
+    <p>Current Size : <span></span></p>
+    <p id="text">Sample Text Here</p>
+    <script>
+        const text = document.getElementById("text")
+        let fontSize = parseInt(getComputedStyle(text).fontSize)
+        const span = document.querySelector("span")
+        span.textContent = fontSize +"px"
+
+        document.querySelector("button")
+                .addEventListener("click", function() {
+                    fontSize += 5
+                    span.textContent = fontSize +"px"
+                    text.style.fontSize = fontSize +"px"
+                })
+    </script>
+</body>
+</html>

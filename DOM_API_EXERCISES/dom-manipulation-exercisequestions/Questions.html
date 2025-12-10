@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exercises on Web Form Processing</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body { font-family: verdana; line-height: 2}
+            div { text-indent: 40px}
+            h1 { text-align: center;}
+            h3 { text-align: center; border-top: 3px solid black ;}
+            .figure { margin-top: 10px; margin: 10px auto ; width: max-content; text-align: center;} 
+            .figure p { text-align: center;}
+            .figure p span { color: blue ;}
+            .figure img { max-width: 60%;}
+            .question { font-style: italic ; background: #DDD; padding: 10px;}
+            .attention { color: #999; font-style: italic; text-align: center;}
+        </style>
+    </head>
+    <body>
+        <h1>DOM Manipulation Exercises</h1>
+        <p class="attention">Do not forget to watch the videos for each question</p>
+        
+        <h3>Question #1</h3>
+        <div>
+            <p class="question">Create a button that, when clicked, generates a random number between 0 and 100 and displays it inside a paragraph. </p>
+            <div class="figure">
+                 <video controls loop>
+                    <source src="./img/q1.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+
+
+        <h3>Question #2</h3>
+        <div>
+            <p class="question">Create a button that, when clicked, generates a random number between 0 and 100, displays it inside a paragraph using the DOM API, and shows the number in blue if it is odd, otherwise in red.</p>
+            <div class="figure">
+                <video controls loop>
+                    <source src="./img/q2.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+        <h3>Question #3</h3>
+        <div>
+            <p class="question">Create a button that, when clicked, generates ten <u>unique</u> random numbers between 0 and 100 and displays them inside a paragraph using the DOM API. Add two checkboxes: Group (which groups the numbers into Odd and Even) and Sort (which sorts the numbers). Odd numbers should appear in blue and even numbers in red.</p>
+            <div class="figure">
+                <video controls loop>
+                    <source src="./img/q3.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+
+        <h3>Question #4</h3>
+        <div>
+            <p class="question">Create five colored boxes (red, blue, green,magenta and orange). When each box is clicked, it should change the color of the ‘Hello World!!’ text to the corresponding color.</p>
+            <div class="figure">
+                <video controls loop>
+                    <source src="./img/q4.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+        <h3>Question #5</h3>
+        <div>
+            <p class="question">Create a ‘+5px’ button. When clicked, it should increase the font size of the text ‘Sample Text Here’ by 5px and display the current font size on the page. The initial font size of p is default size.</p>
+            <div class="figure">
+                <video controls loop>
+                    <source src="./img/q5.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+        <h3>Question #6</h3>
+        <div>
+            <p class="question">Create a page with a button labeled ‘Add a Number’. Each time the button is clicked, generate a random number between 0 and 100 and display it inside a newly created box. Each box should have a randomly generated background color. If the background color is dark (average RGB value < 150), the text color should be white; otherwise, it should be black. Append each new box inside the container.</p>
+            <div class="figure">
+                <video controls loop>
+                    <source src="./img/q6.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+        <h3>Question #7</h3>
+        <div>
+            <p class="question">Create three boxes (100×60, you may use a table), each initially containing a random number between 0 and 10. The largest number(s) should be displayed with a larger, bold font and a #9F9 background. When the user clicks a box, its number should increase by 1.</p>
+            <div class="figure">
+                <video controls loop>
+                    <source src="./img/q7.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+
+        <h3>Question #8</h3>
+        <div>
+            <p class="question">
+                As in the demo, place three cat photos inside circular divs. When a cat photo is clicked, show a larger version of that photo below. Also remove the photo from the clicked circular area and change that circle’s border to dashed
+            </p>
+            <div class="figure">
+                <video controls loop>
+                    <source src="./img/q8.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+        <h3>Question #9</h3>
+        <div>
+            <p class="question">
+                Create a simple click-based game. The page contains a 500×400 playground area and a Start button. When the Start button is clicked, the game should generate ten circular boxes at random positions inside the playground. Each circle must have a light-colored background and display a random number between 1 and 9. After generating the circles, the Start button should be hidden and a score display should appear, starting at zero. When the user clicks any circle, its number should be added to the score, and the circle should fade out with a CSS opacity(0), scale(2), translateY(-200px) transition and become unclickable (CSS "pointer-event:none"). Once all ten circles have been clicked, a ‘GAME OVER’ message should be shown.
+            </p>
+            <div class="figure">
+                <video controls loop>
+                    <source src="./img/q9.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </body>
+</html>

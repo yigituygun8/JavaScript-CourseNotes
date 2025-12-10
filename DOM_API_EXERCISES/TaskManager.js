@@ -98,14 +98,16 @@ function addTask() {
 function updateCount() {
     let taskList = document.getElementById("tasks");
     let count = taskList.children.length; // returns the number of children 
-    document.getElementById("taskCount").innerHTML = `Total tasks: ${count}`;
+    let completedCount = document.querySelectorAll(".task-item.completed").length;
+    let activeCount = count - completedCount;
+    document.getElementById("taskCount").innerHTML = `Total tasks: ${count} (${activeCount} active)`;
 }
 
 function checkCompleted(event) {
     // 'this' refers to the element that was clicked (the <li>)
     // or you can use event.target
     this.classList.toggle("completed");
-    // or event.target.classList.toggle("completed");
+    updateCount();
 }
 
 function deleteTask(event) {

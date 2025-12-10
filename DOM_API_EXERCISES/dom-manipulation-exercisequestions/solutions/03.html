@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p, div { text-align: center;}
+        span, label { margin-right: 20px;}
+        
+    </style>
+</head>
+<body>
+    <p id="number">##</p>
+    <div>
+        <button>Random</button> <br><br>
+        <input type="checkbox" name="group" id="group">
+        <label for="group">Group </label>
+
+        <input type="checkbox" name="sort" id="sort">
+        <label for="sort">Sort </label>
+    </div>
+    <script>
+        const p = document.getElementById("number")
+        const btn = document.querySelector("button")
+        const group = document.getElementById("group")
+        const sort = document.getElementById("sort")
+        btn.addEventListener("click", function() {
+            let nums = []
+            do {
+               const rnd = Math.floor(Math.random() * 101)
+               if ( !nums.includes(rnd)) nums.push(rnd)
+            } while(nums.length < 10)
+            
+            if (sort.checked) {
+                nums.sort( (a,b) => a - b)
+            }
+           
+            if (group.checked) {
+                const odd = nums.filter( n => n % 2 === 1)
+                const even = nums.filter( n => n % 2 === 0)
+                nums = odd.concat(even)
+            }
+            
+            p.innerHTML = ""
+            for (let i = 0; i < 10; i++) {
+                let color = nums[i] % 2 === 1 ? "blue" : "red"
+                p.innerHTML += `<span style="color:${color}">${nums[i]}</span>`
+            }
+        })
+    </script>
+</body>
+</html>

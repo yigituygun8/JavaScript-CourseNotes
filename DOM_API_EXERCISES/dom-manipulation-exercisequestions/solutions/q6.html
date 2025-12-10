@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {text-align: center;}
+        .container { display: flex; gap: 20px ; padding: 20px; flex-wrap: wrap;}
+        .box { padding: 6px 10px; border-radius: 10px; }
+    </style>
+</head>
+<body>
+    <div><button>Add a Number</button></div>
+    <div class="container"></div>
+    <script>
+        const container = document.querySelector(".container")
+        document.querySelector("button")
+                .addEventListener("click", function() {
+                    let rnd = Math.floor(Math.random() * 100)
+                    const bgColor = randomColor()
+                    const textColor = bgColor.average < 150 ? "white" : "black"
+                    // const div = document.createElement("div")
+                    // div.textContent = rnd
+                    // div.style.backgroundColor = bgColor.color
+                    // div.style.color = textColor
+                    // div.classList.add("box")
+                    // container.append(div)
+                    // -OR- 
+                    
+                    console.log(bgColor.average)
+                    container.innerHTML += `<div style="background:${bgColor.color}; color:${textColor}" 
+                                                 class="box">${rnd}
+                                            </div>`
+                })
+
+        // pick a random color among ~ 16 million colors (256x256x256)
+        function randomColor() {
+            const r = Math.floor(Math.random() * 256)
+            const g = Math.floor(Math.random() * 256)
+            const b = Math.floor(Math.random() * 256)
+            return { color:`rgb(${r} ${g} ${b})` , average: Math.round((r+g+b)/3) }
+        }
+    </script>
+</body>
+</html>
