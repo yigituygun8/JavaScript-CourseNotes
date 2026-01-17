@@ -1,5 +1,13 @@
-// Promise is an object representing the eventual completion or failure of an asynchronous operation.
-// States -> Pending, Fulfilled, Rejected
+/*
+Promise is an object representing the eventual completion or failure of an asynchronous operation.
+States -> Pending, Fulfilled, Rejected
+
+Why do we need Promises?
+-JS is single-threaded, meaning it can only execute one task at a time.
+-When a long-running task (like fetching data from a server) is executed, it can block the main thread, making the application unresponsive.
+-Promises allow us to handle asynchronous operations without blocking the main thread, enabling smoother user experiences.
+*/
+
 
 // Creating a Promise
 const promise = new Promise((resolve, reject) => {
