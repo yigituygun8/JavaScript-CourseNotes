@@ -1,18 +1,23 @@
-# JavaScript-CourseNotes
+# JavaScript Course Notes
 
-This repository contains my JavaScript learning journey through a basic course but mostly reading documentation and searching on my own, supporting my CTIS 255 - Frontend Web Technologies course at Bilkent University.
+This repository documents my JavaScript learning journey, created to support **CTIS 255 – Frontend Web Technologies** at Bilkent University.  
+It focuses on building strong fundamentals through documentation-driven learning, experimentation, and independent research.
 
 ## Purpose
-- Supplement my CTIS 255 coursework with in-depth JavaScript knowledge
-- Develop a habit of diving into documentation and researching best practices
-- Explore JavaScript concepts beyond the basics
-- Build a comprehensive reference for future projects and works
+- Reinforce CTIS 255 coursework with deeper JavaScript understanding
+- Develop the habit of reading official documentation and best practices
+- Go beyond surface-level tutorials into how JavaScript actually works
+- Maintain a long-term reference for future frontend and full-stack projects
 
 ## Contents
-- Course notes and code examples from Conner Ardman's JavaScript tutorial series
-- Personal experiments and practice projects
-- Deep dives into JavaScript fundamentals and advanced topics
+- Course notes and annotated code examples inspired by Conner Ardman’s JavaScript tutorial series
+- Personal experiments and small practice implementations
+- Deep dives into JavaScript fundamentals and selected advanced topics
 
 ## Exercises
-- Adding exercises written by the AI agent I use so that I can practice what I learn.
-- Taking small notes in comments everywhere to create a reference sheet for future.
+- Practice exercises generated to reinforce concepts
+- Custom implementations written to test understanding rather than memorization
+
+## Notes
+This repository prioritizes **learning by exploration and documentation**, not just following tutorials.  
+I aim to build a solid foundation in JavaScript that will serve me well in future web development.
